@@ -10,6 +10,8 @@ COPY apache-tomcat-9.0.53.tar.gz /tmp/apache-tomcat-9.0.53.tar.gz
 
 RUN tar xvzf /tmp/apache-tomcat-9.0.53.tar.gz --strip-components 1 --directory /opt/tomcat
 
+COPY geo-citizen-1.0.5-59.war /opt/tomcat/webapps/citizen.war
+
 COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 8080
