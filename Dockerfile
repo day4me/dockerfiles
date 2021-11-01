@@ -15,6 +15,5 @@ COPY geo-citizen-1.0.5-59.war /opt/tomcat/webapps/citizen.war
 COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 8080
-EXPOSE 9022
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
